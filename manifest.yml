@@ -1,0 +1,15 @@
+---
+declared-services:
+  assistant-prod:
+    label: assistant
+applications:
+- name: M48EVAChatbot
+  route: M48EVAChatbot
+  command: npm start
+  path: .
+  instances: 1
+  services:
+  - Watson Assistant-71
+  memory: 1024M
+  env:
+    NPM_CONFIG_PRODUCTION: false
